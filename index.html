@@ -3,138 +3,762 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIForWork & Study | Manually Verified Free AI Tools</title>
-    <script src="https://tailwindcss.com"></script>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Free AI Tools for Work & Study | AIForWork & Study</title>
+
+    <meta name="description"
+          content="Discover useful free AI tools for work, study, writing, research, presentations, meetings, productivity and everyday tasks. A clean, curated AI tools directory.">
+
+    <meta name="keywords"
+          content="free AI tools, free AI tools for work, free AI tools for students, AI productivity tools, AI writing tools, AI research tools, AI tools for professionals">
+
+    <meta name="author" content="AIForWork & Study">
+
+    <link rel="canonical" href="https://ai-directory669.github.io/free-ai-tools/">
+
+    <meta property="og:title" content="Free AI Tools for Work & Study">
+    <meta property="og:description"
+          content="Find useful free AI tools for writing, research, meetings, presentations, productivity and study.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-directory669.github.io/free-ai-tools/">
+
+    <meta name="theme-color" content="#0b0f19">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0B0F19; color: #F3F4F6; }
-        .gradient-text { background: linear-gradient(135deg, #6EE7B7 0%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-style { background: rgba(17, 24, 39, 0.7); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .card-style:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-4px); transition: all 0.3s ease; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background:
+                radial-gradient(circle at 50% -10%, rgba(59,130,246,.10), transparent 35%),
+                #0B0F19;
+            color: #F3F4F6;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6EE7B7 0%, #60A5FA 55%, #A78BFA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-style {
+            background: rgba(17, 24, 39, .72);
+            border: 1px solid rgba(255,255,255,.07);
+            backdrop-filter: blur(10px);
+        }
+
+        .tool-card {
+            transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(96,165,250,.35);
+            box-shadow: 0 14px 35px rgba(0,0,0,.20);
+        }
+
+        .task-btn {
+            transition: all .18s ease;
+        }
+
+        .task-btn:hover {
+            border-color: rgba(96,165,250,.45);
+            background: rgba(59,130,246,.08);
+        }
+
+        .official-btn {
+            transition: all .18s ease;
+        }
+
+        .official-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .coffee-btn {
+            transition: all .2s ease;
+        }
+
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 </head>
-<body class="min-h-screen pb-20">
 
-    <header class="max-w-6xl mx-auto px-4 pt-16 pb-8 text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Manually Verified & Active
-        </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-            AIForWork & <span class="gradient-text">Study</span>
-        </h1>
-        <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-            A curated directory of 100% manually verified <span class="text-emerald-400 font-medium">Free AI Productivity Tools</span> built to save time for students and working professionals.
-        </p>
-    </header>
+<body class="min-h-screen">
 
-    <section class="max-w-6xl mx-auto px-4 mb-12">
-        <div class="flex flex-col md:flex-row gap-4 items-center justify-between card-style p-4 rounded-2xl">
-            <div class="relative w-full md:w-80">
-                <input type="text" id="searchBar" onkeyup="filterTools()" placeholder="Search tools or benefits..." class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-blue-500 transition-all placeholder-gray-500 text-white">
-            </div>
-            <div class="flex flex-wrap gap-2 w-full md:w-auto justify-start md:justify-end" id="filterButtonGroup">
-                <button onclick="filterCategory('All')" class="px-4 py-2 text-sm font-medium rounded-xl bg-blue-600 text-white transition-all">All Tools</button>
-                <button onclick="filterCategory('Writing & Research')" class="px-4 py-2 text-sm font-medium rounded-xl bg-gray-900 text-gray-400 border border-gray-800 hover:border-gray-700 transition-all">Writing & Research</button>
-                <button onclick="filterCategory('Design & Presentations')" class="px-4 py-2 text-sm font-medium rounded-xl bg-gray-900 text-gray-400 border border-gray-800 hover:border-gray-700 transition-all">Design & Presentation</button>
-                <button onclick="filterCategory('Task Automation & Meeting Notes')" class="px-4 py-2 text-sm font-medium rounded-xl bg-gray-900 text-gray-400 border border-gray-800 hover:border-gray-700 transition-all">Automation</button>
-            </div>
-        </div>
-    </section>
+<!-- HEADER -->
+<header class="max-w-6xl mx-auto px-5 pt-12 md:pt-20 pb-10 text-center">
 
-    <main class="max-w-6xl mx-auto px-4">
-        <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Dynamic Grid Area -->
-        </div>
-    </main>
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full
+                bg-blue-500/10 border border-blue-500/20
+                text-blue-300 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+        Curated Free AI Tools
+    </div>
 
-    <footer class="max-w-3xl mx-auto px-4 mt-20 text-center">
-        <div class="card-style rounded-2xl p-8 border border-dashed border-gray-800">
-            <h3 class="text-xl font-bold mb-2">Support This Ad-Free Directory ☕</h3>
-            <p class="text-sm text-gray-400 mb-6 max-w-md mx-auto">
-                I keep this site 100% clean, fast, and free of annoying popup ads. If any of these tools helped you save hours of work, consider buying me a coffee!
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+        Free AI Tools for
+        <span class="gradient-text">Work & Study</span>
+    </h1>
+
+    <p class="mt-5 text-gray-400 text-base md:text-lg leading-7
+              max-w-2xl mx-auto">
+        Find useful AI tools for writing, research, presentations, meetings,
+        productivity and everyday work — without wasting time searching through
+        thousands of options.
+    </p>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2
+                text-xs text-gray-500">
+        <span>✓ Curated tools</span>
+        <span>✓ Free access or free tiers</span>
+        <span>✓ Practical use cases</span>
+        <span>✓ No ads</span>
+    </div>
+
+</header>
+
+
+<!-- TASK DISCOVERY -->
+<section class="max-w-6xl mx-auto px-5 mb-10">
+
+    <div class="card-style rounded-3xl p-5 md:p-7">
+
+        <div class="text-center mb-5">
+            <h2 class="text-xl md:text-2xl font-bold text-white">
+                What do you need help with?
+            </h2>
+
+            <p class="text-sm text-gray-500 mt-2">
+                Choose a task to quickly find relevant AI tools.
             </p>
-            <a href="https://buymeacoffee.com/aiforwork" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-gray-950 font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/10">
-                <span>☕</span> Buy Me a Coffee
-            </a>
         </div>
-    </footer>
-    <script>
-        const toolsData = [
-            { name: "Perplexity AI", category: "Writing & Research", benefit: "Gives direct, cited answers to research questions instead of a list of links to sift through.", url: "https://perplexity.ai", trust_tag: "No Credit Card Required" },
-            { name: "Grammarly", category: "Writing & Research", benefit: "Checks grammar, tone, and clarity in real time across browsers, docs, and email.", url: "https://grammarly.com", trust_tag: "Generous Free Tier" },
-            { name: "QuillBot", category: "Writing & Research", benefit: "Rewrites and paraphrases sentences to improve clarity without changing the original meaning.", url: "https://quillbot.com", trust_tag: "No Credit Card Required" },
-            { name: "NotebookLM", category: "Writing & Research", benefit: "Turns your own uploaded documents into a source-grounded AI assistant for study and research.", url: "https://notebooklm.google", trust_tag: "100% Free Tier" },
-            { name: "Elicit", category: "Writing & Research", benefit: "Searches and summarizes findings across millions of academic papers using natural-language questions.", url: "https://elicit.com", trust_tag: "Free Credits Available" },
-            { name: "Canva", category: "Design & Presentations", benefit: "Provides drag-and-drop design templates with AI tools for posters, resumes, and slide decks.", url: "https://canva.com", trust_tag: "Generous Free Tier" },
-            { name: "Gamma", category: "Design & Presentations", benefit: "Generates a full slide deck or document from a text prompt or outline in minutes.", url: "https://gamma.app", trust_tag: "No Credit Card Required" },
-            { name: "Napkin AI", category: "Design & Presentations", benefit: "Converts plain text or notes into visual diagrams and infographics automatically.", url: "https://napkin.ai", trust_tag: "No Credit Card Required" },
-            { name: "Microsoft Designer", category: "Design & Presentations", benefit: "Creates social posts, flyers, and graphics from a prompt using AI-assisted templates.", url: "https://microsoft.com", trust_tag: "Free MS Account" },
-            { name: "Beautiful.ai", category: "Design & Presentations", benefit: "Auto-adjusts slide layouts and spacing as you add content, so decks stay visually consistent.", url: "https://beautiful.ai", trust_tag: "Free Trial Available" },
-            { name: "Otter.ai", category: "Task Automation & Meeting Notes", benefit: "Transcribes meetings live and generates an automatic summary with action items.", url: "https://otter.ai", trust_tag: "Generous Free Tier" },
-            { name: "Fireflies.ai", category: "Task Automation & Meeting Notes", benefit: "Records, transcribes, and searches across all your past meeting conversations automatically.", url: "https://fireflies.ai", trust_tag: "Generous Free Tier" },
-            { name: "Notion AI", category: "Task Automation & Meeting Notes", benefit: "Drafts, summarizes, and organizes notes and tasks directly inside your existing workspace.", url: "https://notion.com", trust_tag: "Free Starter Access" },
-            { name: "Zapier", category: "Task Automation & Meeting Notes", benefit: "Connects apps so repetitive tasks (like saving email attachments to Drive) run automatically.", url: "https://zapier.com", trust_tag: "Generous Free Tier" },
-            { name: "TickTick", category: "Task Automation & Meeting Notes", benefit: "Combines to-do lists, calendar, and habit tracking with smart date parsing for quick task entry.", url: "https://ticktick.com", trust_tag: "Generous Free Tier" }
-        ];
 
-        let activeCategory = 'All';
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
 
-        function renderDirectory(dataList) {
-            const container = document.getElementById('toolsGrid');
-            container.innerHTML = '';
-            if (dataList.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500 text-sm">No matched tools discovered.</div>`;
-                return;
-            }
-            dataList.forEach(item => {
-                const element = document.createElement('div');
-                element.className = 'card-style rounded-2xl p-6 flex flex-col justify-between';
-                element.innerHTML = `
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-4">
-                            <span class="text-[11px] font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/5 px-2.5 py-1 rounded-md border border-blue-500/10">${item.category}</span>
-                            <span class="text-[11px] font-medium text-emerald-400 bg-emerald-500/5 px-2.5 py-1 rounded-md border border-emerald-500/10">${item.trust_tag}</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-white mb-2">${item.name}</h2>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">${item.benefit}</p>
-                    </div>
-                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gray-900 hover:bg-gray-800 border border-gray-800 text-gray-200 hover:text-white font-medium text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-1.5 transition-all">
-                        Visit Official Site
-                        <svg xmlns="http://w3.org" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    </a>
-                `;
-                container.appendChild(element);
-            });
+            <button onclick="filterCategory('Writing & Research')"
+                    class="task-btn rounded-xl border border-gray-800
+                           bg-gray-900/70 px-3 py-3 text-sm text-gray-300">
+                ✍️ Writing
+            </button>
+
+            <button onclick="filterCategory('Writing & Research')"
+                    class="task-btn rounded-xl border border-gray-800
+                           bg-gray-900/70 px-3 py-3 text-sm text-gray-300">
+                🔎 Research
+            </button>
+
+            <button onclick="filterCategory('Design & Presentations')"
+                    class="task-btn rounded-xl border border-gray-800
+                           bg-gray-900/70 px-3 py-3 text-sm text-gray-300">
+                📊 Presentations
+            </button>
+
+            <button onclick="filterCategory('Task Automation & Meeting Notes')"
+                    class="task-btn rounded-xl border border-gray-800
+                           bg-gray-900/70 px-3 py-3 text-sm text-gray-300">
+                🎙️ Meetings
+            </button>
+
+            <button onclick="filterCategory('Task Automation & Meeting Notes')"
+                    class="task-btn rounded-xl border border-gray-800
+                           bg-gray-900/70 px-3 py-3 text-sm text-gray-300">
+                ⚙️ Automation
+            </button>
+
+            <button onclick="filterCategory('All')"
+                    class="task-btn rounded-xl border border-gray-800
+                           bg-gray-900/70 px-3 py-3 text-sm text-gray-300">
+                ✨ All Tools
+            </button>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- SEARCH + FILTER -->
+<section class="max-w-6xl mx-auto px-5 mb-10">
+
+    <div class="card-style rounded-2xl p-4">
+
+        <div class="flex flex-col lg:flex-row gap-4
+                    lg:items-center lg:justify-between">
+
+            <div class="relative w-full lg:max-w-md">
+
+                <label for="searchBar" class="sr-only">
+                    Search AI tools
+                </label>
+
+                <input
+                    type="search"
+                    id="searchBar"
+                    oninput="filterTools()"
+                    placeholder="Search by tool, task or benefit..."
+                    autocomplete="off"
+                    class="w-full bg-gray-950/70 border border-gray-800
+                           rounded-xl px-4 py-3 text-sm
+                           focus:outline-none focus:border-blue-500
+                           text-white placeholder-gray-600">
+            </div>
+
+            <div id="filterButtonGroup"
+                 class="flex flex-wrap gap-2">
+
+                <button data-category="All"
+                        onclick="filterCategory('All')"
+                        class="filter-btn active-filter">
+                    All
+                </button>
+
+                <button data-category="Writing & Research"
+                        onclick="filterCategory('Writing & Research')"
+                        class="filter-btn">
+                    Writing & Research
+                </button>
+
+                <button data-category="Design & Presentations"
+                        onclick="filterCategory('Design & Presentations')"
+                        class="filter-btn">
+                    Design & Presentations
+                </button>
+
+                <button data-category="Task Automation & Meeting Notes"
+                        onclick="filterCategory('Task Automation & Meeting Notes')"
+                        class="filter-btn">
+                    Productivity & Automation
+                </button>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- DIRECTORY -->
+<main class="max-w-6xl mx-auto px-5">
+
+    <div class="flex items-center justify-between mb-5">
+        <div>
+            <h2 class="text-xl md:text-2xl font-bold">
+                Free AI Tools
+            </h2>
+
+            <p class="text-sm text-gray-500 mt-1">
+                Practical tools selected for real work and study tasks.
+            </p>
+        </div>
+
+        <span id="toolCount"
+              class="text-xs text-gray-500">
+        </span>
+    </div>
+
+
+    <div id="toolsGrid"
+         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    </div>
+
+</main>
+
+
+<!-- TRUST / EDITORIAL NOTE -->
+<section class="max-w-3xl mx-auto px-5 mt-16">
+
+    <div class="card-style rounded-2xl p-6 md:p-8">
+
+        <h2 class="text-lg font-bold mb-3">
+            How this directory works
+        </h2>
+
+        <p class="text-sm text-gray-400 leading-6">
+            This directory focuses on practical AI tools that offer free access
+            or a free tier. AI products can change their pricing, limits and
+            features over time, so always check the current terms on the
+            official tool website before relying on a feature.
+        </p>
+
+        <div class="grid sm:grid-cols-3 gap-4 mt-6">
+
+            <div>
+                <div class="text-xl mb-2">🎯</div>
+                <h3 class="text-sm font-semibold">Task focused</h3>
+                <p class="text-xs text-gray-500 mt-1">
+                    Find tools by what you actually need to do.
+                </p>
+            </div>
+
+            <div>
+                <div class="text-xl mb-2">🧹</div>
+                <h3 class="text-sm font-semibold">No clutter</h3>
+                <p class="text-xs text-gray-500 mt-1">
+                    No pop-ups, ad-heavy pages or unnecessary promotions.
+                </p>
+            </div>
+
+            <div>
+                <div class="text-xl mb-2">🔗</div>
+                <h3 class="text-sm font-semibold">Official destinations</h3>
+                <p class="text-xs text-gray-500 mt-1">
+                    Tool buttons lead directly to the official websites.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- BUY ME A COFFEE -->
+<footer class="max-w-3xl mx-auto px-5 mt-14 pb-16">
+
+    <div class="card-style rounded-3xl p-7 md:p-9 text-center">
+
+        <div class="text-3xl mb-3">☕</div>
+
+        <h2 class="text-xl md:text-2xl font-bold">
+            Found this directory useful?
+        </h2>
+
+        <p class="text-sm text-gray-400 leading-6
+                  max-w-lg mx-auto mt-3 mb-6">
+            I maintain this free resource to help people discover useful AI
+            tools without spending hours searching. If it saved you time,
+            you can support the project with a coffee. ❤️
+        </p>
+
+        <a
+            href="https://buymeacoffee.com/aiforwork"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="coffee-btn inline-flex items-center justify-center gap-2
+                   bg-amber-400 hover:bg-amber-300
+                   text-gray-950 font-bold
+                   px-6 py-3 rounded-xl
+                   shadow-lg shadow-amber-500/10">
+            ☕ Buy Me a Coffee
+        </a>
+
+        <p class="text-[11px] text-gray-600 mt-4">
+            Completely optional. Thank you for supporting the project.
+        </p>
+
+    </div>
+
+    <p class="text-center text-xs text-gray-700 mt-6">
+        © 2026 AIForWork & Study
+    </p>
+
+</footer>
+
+
+<script>
+
+const toolsData = [
+
+    {
+        name: "Perplexity AI",
+        category: "Writing & Research",
+        benefit: "Research questions with direct answers and cited sources instead of sorting through a long list of search results.",
+        bestFor: "Research & fact-finding",
+        free: "Free access available",
+        url: "https://perplexity.ai"
+    },
+
+    {
+        name: "Grammarly",
+        category: "Writing & Research",
+        benefit: "Improve grammar, clarity, tone and everyday writing across emails, documents and online text.",
+        bestFor: "Writing & editing",
+        free: "Free plan available",
+        url: "https://grammarly.com"
+    },
+
+    {
+        name: "QuillBot",
+        category: "Writing & Research",
+        benefit: "Rewrite and paraphrase text to improve clarity while keeping the original meaning.",
+        bestFor: "Paraphrasing",
+        free: "Free plan available",
+        url: "https://quillbot.com"
+    },
+
+    {
+        name: "NotebookLM",
+        category: "Writing & Research",
+        benefit: "Work with your own documents and sources using an AI assistant designed for grounded study and research.",
+        bestFor: "Study & documents",
+        free: "Free access available",
+        url: "https://notebooklm.google"
+    },
+
+    {
+        name: "Elicit",
+        category: "Writing & Research",
+        benefit: "Find and summarise academic research using natural-language questions and paper-focused workflows.",
+        bestFor: "Academic research",
+        free: "Free access available",
+        url: "https://elicit.com"
+    },
+
+    {
+        name: "Canva",
+        category: "Design & Presentations",
+        benefit: "Create presentations, documents and visual designs using templates and AI-assisted features.",
+        bestFor: "Design & presentations",
+        free: "Free plan available",
+        url: "https://canva.com"
+    },
+
+    {
+        name: "Gamma",
+        category: "Design & Presentations",
+        benefit: "Turn an idea, outline or prompt into a polished presentation or document quickly.",
+        bestFor: "Presentations",
+        free: "Free access available",
+        url: "https://gamma.app"
+    },
+
+    {
+        name: "Napkin AI",
+        category: "Design & Presentations",
+        benefit: "Turn written ideas into visual diagrams and explanatory graphics.",
+        bestFor: "Visual explanations",
+        free: "Free access available",
+        url: "https://napkin.ai"
+    },
+
+    {
+        name: "Microsoft Designer",
+        category: "Design & Presentations",
+        benefit: "Create visual designs and graphics with AI-assisted generation and editing features.",
+        bestFor: "AI design",
+        free: "Free access available",
+        url: "https://designer.microsoft.com"
+    },
+
+    {
+        name: "Beautiful.ai",
+        category: "Design & Presentations",
+        benefit: "Build presentation slides with layouts that automatically adjust as you add content.",
+        bestFor: "Professional slides",
+        free: "Free access available",
+        url: "https://beautiful.ai"
+    },
+
+    {
+        name: "Otter.ai",
+        category: "Task Automation & Meeting Notes",
+        benefit: "Transcribe meetings and conversations and turn them into searchable notes and summaries.",
+        bestFor: "Meeting notes",
+        free: "Free plan available",
+        url: "https://otter.ai"
+    },
+
+    {
+        name: "Fireflies.ai",
+        category: "Task Automation & Meeting Notes",
+        benefit: "Record, transcribe and search meeting conversations to make follow-up easier.",
+        bestFor: "Meeting productivity",
+        free: "Free plan available",
+        url: "https://fireflies.ai"
+    },
+
+    {
+        name: "Notion AI",
+        category: "Task Automation & Meeting Notes",
+        benefit: "Draft, summarise and organise information inside a workspace for notes, projects and tasks.",
+        bestFor: "Workspace productivity",
+        free: "Free access available",
+        url: "https://notion.com"
+    },
+
+    {
+        name: "Zapier",
+        category: "Task Automation & Meeting Notes",
+        benefit: "Connect apps and automate repetitive workflows such as moving information between services.",
+        bestFor: "Automation",
+        free: "Free plan available",
+        url: "https://zapier.com"
+    },
+
+    {
+        name: "TickTick",
+        category: "Task Automation & Meeting Notes",
+        benefit: "Organise tasks, schedules and habits in one productivity-focused workspace.",
+        bestFor: "Task management",
+        free: "Free plan available",
+        url: "https://ticktick.com"
+    }
+
+];
+
+
+let activeCategory = "All";
+
+
+function escapeHTML(value) {
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+function renderDirectory(dataList) {
+
+    const container = document.getElementById("toolsGrid");
+    const count = document.getElementById("toolCount");
+
+    container.innerHTML = "";
+
+    count.textContent =
+        `${dataList.length} ${dataList.length === 1 ? "tool" : "tools"}`;
+
+    if (dataList.length === 0) {
+
+        container.innerHTML = `
+            <div class="col-span-full text-center py-16
+                        card-style rounded-2xl">
+                <div class="text-3xl mb-3">🔎</div>
+                <h3 class="font-semibold text-white">
+                    No matching tools found
+                </h3>
+                <p class="text-sm text-gray-500 mt-2">
+                    Try another keyword or choose "All".
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    dataList.forEach(item => {
+
+        const element = document.createElement("article");
+
+        element.className =
+            "tool-card card-style rounded-2xl p-5 flex flex-col h-full";
+
+        element.innerHTML = `
+
+            <div class="flex-1">
+
+                <div class="flex items-start justify-between gap-3 mb-4">
+
+                    <span class="text-[10px] font-semibold uppercase
+                                 tracking-wider text-blue-300
+                                 bg-blue-500/10 border border-blue-500/10
+                                 px-2.5 py-1 rounded-md">
+                        ${escapeHTML(item.category)}
+                    </span>
+
+                    <span class="shrink-0 text-[10px] font-medium
+                                 text-emerald-300
+                                 bg-emerald-500/10
+                                 border border-emerald-500/10
+                                 px-2.5 py-1 rounded-md">
+                        ${escapeHTML(item.free)}
+                    </span>
+
+                </div>
+
+
+                <h3 class="text-xl font-bold text-white mb-2">
+                    ${escapeHTML(item.name)}
+                </h3>
+
+
+                <p class="text-gray-400 text-sm leading-6 line-clamp-3">
+                    ${escapeHTML(item.benefit)}
+                </p>
+
+
+                <div class="mt-5 pt-4 border-t border-gray-800/80">
+
+                    <p class="text-xs text-gray-500 uppercase
+                              tracking-wide mb-1">
+                        Best for
+                    </p>
+
+                    <p class="text-sm text-gray-300">
+                        ${escapeHTML(item.bestFor)}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="${item.url}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit the official website of ${escapeHTML(item.name)}"
+                class="official-btn w-full mt-5 text-center
+                       bg-gray-900 hover:bg-gray-800
+                       border border-gray-800
+                       text-gray-200 hover:text-white
+                       font-semibold text-sm
+                       py-3 px-4 rounded-xl
+                       flex items-center justify-center gap-2">
+
+                Visit Official Site
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true">
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+
+                </svg>
+
+            </a>
+        `;
+
+        container.appendChild(element);
+
+    });
+
+}
+
+
+function filterTools() {
+
+    const input =
+        document.getElementById("searchBar")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered = toolsData.filter(tool => {
+
+        const searchableText = `
+            ${tool.name}
+            ${tool.category}
+            ${tool.benefit}
+            ${tool.bestFor}
+            ${tool.free}
+        `.toLowerCase();
+
+
+        const searchMatch =
+            searchableText.includes(input);
+
+
+        const categoryMatch =
+            activeCategory === "All" ||
+            tool.category === activeCategory;
+
+
+        return searchMatch && categoryMatch;
+
+    });
+
+
+    renderDirectory(filtered);
+
+}
+
+
+function filterCategory(category) {
+
+    activeCategory = category;
+
+
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(button => {
+
+            const isActive =
+                button.dataset.category === category;
+
+            button.classList.toggle(
+                "active-filter",
+                isActive
+            );
+
+        });
+
+
+    filterTools();
+
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const style = document.createElement("style");
+
+    style.textContent = `
+
+        .filter-btn {
+            padding: .55rem .85rem;
+            border-radius: .75rem;
+            font-size: .75rem;
+            font-weight: 600;
+            color: #9CA3AF;
+            background: #111827;
+            border: 1px solid #1F2937;
+            transition: all .18s ease;
         }
 
-        function filterTools() {
-            const inputVal = document.getElementById('searchBar').value.toLowerCase();
-            const filteredArray = toolsData.filter(tool => {
-                const searchMatch = tool.name.toLowerCase().includes(inputVal) || tool.benefit.toLowerCase().includes(inputVal);
-                const categoryMatch = activeCategory === 'All' || tool.category === activeCategory;
-                return searchMatch && categoryMatch;
-            });
-            renderDirectory(filteredArray);
+        .filter-btn:hover {
+            color: #E5E7EB;
+            border-color: #374151;
         }
 
-        function filterCategory(catName) {
-            activeCategory = catName;
-            const buttons = document.querySelectorAll('#filterButtonGroup button');
-            buttons.forEach(btn => {
-                if (btn.innerText.includes(catName === 'All' ? 'All' : catName.split(' & '))) {
-                    btn.className = "px-4 py-2 text-sm font-medium rounded-xl bg-blue-600 text-white transition-all";
-                } else {
-                    btn.className = "px-4 py-2 text-sm font-medium rounded-xl bg-gray-900 text-gray-400 border border-gray-800 hover:border-gray-700 transition-all";
-                }
-            });
-            filterTools();
+        .active-filter {
+            color: white !important;
+            background: #2563EB !important;
+            border-color: #2563EB !important;
         }
 
-        renderDirectory(toolsData);
-    </script>
+    `;
+
+    document.head.appendChild(style);
+
+    renderDirectory(toolsData);
+
+});
+</script>
+
 </body>
 </html>
-
-
