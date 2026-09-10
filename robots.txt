@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-directory669.github.io/free-ai-tools/sitemap.xml
