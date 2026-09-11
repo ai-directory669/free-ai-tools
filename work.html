@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free AI Tools for Work | AIForWork & Study</title>
+  <meta name="description" content="Find useful free AI tools for work, writing, research, meetings, presentations, productivity and everyday professional tasks.">
+  <meta name="keywords" content="free AI tools for work, AI tools for professionals, free AI productivity tools, AI writing tools, AI meeting tools, AI research tools">
+
+  <link rel="canonical" href="https://ai-directory669.github.io/free-ai-tools/work.html">
+
+  <meta property="og:title" content="Free AI Tools for Work">
+  <meta property="og:description" content="Useful AI tools for writing, research, meetings, presentations and everyday professional work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-directory669.github.io/free-ai-tools/work.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <header class="max-w-6xl mx-auto px-5 py-8">
+    <a href="index.html"
+       class="text-sm text-slate-400 hover:text-white transition">
+      ← Back to AIForWork & Study
+    </a>
+
+    <div class="mt-8 max-w-3xl">
+      <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider">
+        AIForWork & Study
+      </p>
+
+      <h1 class="text-4xl md:text-5xl font-bold mt-3 tracking-tight">
+        Free AI Tools for Work
+      </h1>
+
+      <p class="text-lg text-slate-400 mt-5 leading-relaxed">
+        Find useful AI tools for writing, research, meetings, presentations,
+        productivity and everyday professional work — without wasting time
+        searching through thousands of options.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-5 pb-16">
+
+    <section class="mb-10">
+      <div class="relative">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search work tools by task..."
+          class="w-full rounded-2xl bg-slate-900 border border-slate-800 px-5 py-4 text-white placeholder-slate-500 outline-none focus:border-slate-600"
+        >
+      </div>
+
+      <p id="toolCount" class="text-sm text-slate-500 mt-3"></p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold mb-5">
+        Choose an AI tool based on your work task
+      </h2>
+
+      <div id="toolsGrid"
+           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      </div>
+
+      <p id="noResults"
+         class="hidden text-center text-slate-500 py-10">
+        No matching tools found. Try another search.
+      </p>
+    </section>
+
+    <section class="mt-16 border-t border-slate-800 pt-10">
+      <h2 class="text-2xl font-bold">
+        How to use AI tools at work
+      </h2>
+
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 text-slate-400 leading-relaxed">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+          <h3 class="font-semibold text-white mb-2">Writing & Communication</h3>
+          Use AI to improve emails, rewrite drafts, summarise information and
+          make professional communication clearer.
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+          <h3 class="font-semibold text-white mb-2">Research & Information</h3>
+          Use AI research tools to find information, explore topics and
+          organise sources before making important decisions.
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+          <h3 class="font-semibold text-white mb-2">Meetings</h3>
+          AI meeting tools can help capture notes, organise discussions and
+          turn conversations into useful action items.
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+          <h3 class="font-semibold text-white mb-2">Productivity</h3>
+          Use AI to reduce repetitive work, organise tasks and spend more time
+          on work that requires human judgement.
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 text-center">
+      <p class="text-slate-400">
+        This directory focuses on useful tools with free access available.
+        Features and free limits may change over time.
+      </p>
+    </section>
+
+    <section class="mt-12 text-center">
+      <p class="text-slate-400 mb-4">
+        Found this directory useful?
+      </p>
+
+      <a href="https://www.buymeacoffee.com/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="inline-block px-6 py-3 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition">
+        ☕ Support AIForWork & Study
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-5 py-8 text-center text-sm text-slate-500">
+      © 2026 AIForWork & Study ·
+      <a href="index.html" class="hover:text-white">
+        Back to Home
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const tools = [
+      {
+        name: "ChatGPT",
+        category: "Writing & Productivity",
+        bestFor: "Emails, drafting, brainstorming and everyday work",
+        description: "A general-purpose AI assistant for writing, ideas, summaries, analysis and many everyday professional tasks.",
+        url: "https://chatgpt.com/"
+      },
+      {
+        name: "Claude",
+        category: "Writing & Analysis",
+        bestFor: "Long documents, writing and thoughtful analysis",
+        description: "Useful for drafting, analysing documents, summarising information and working through complex written tasks.",
+        url: "https://claude.ai/"
+      },
+      {
+        name: "Perplexity",
+        category: "Research",
+        bestFor: "Web research and information discovery",
+        description: "An AI search and research tool that helps explore questions and discover information from the web.",
+        url: "https://www.perplexity.ai/"
+      },
+      {
+        name: "Gemini",
+        category: "Productivity",
+        bestFor: "Writing, brainstorming and Google ecosystem tasks",
+        description: "Google's AI assistant for writing, brainstorming, research and a range of everyday productivity tasks.",
+        url: "https://gemini.google.com/"
+      },
+      {
+        name: "Grammarly",
+        category: "Writing",
+        bestFor: "Professional writing and editing",
+        description: "Helps improve grammar, clarity, tone and overall writing quality for professional communication.",
+        url: "https://www.grammarly.com/"
+      },
+      {
+        name: "QuillBot",
+        category: "Writing",
+        bestFor: "Rewriting, paraphrasing and summaries",
+        description: "Useful for rewriting text, paraphrasing drafts and creating concise versions of written content.",
+        url: "https://quillbot.com/"
+      },
+      {
+        name: "Notion",
+        category: "Organisation",
+        bestFor: "Notes, projects and knowledge management",
+        description: "A workspace for organising notes, projects, documents and team information, with AI features available.",
+        url: "https://www.notion.so/"
+      },
+      {
+        name: "Canva",
+        category: "Presentations & Design",
+        bestFor: "Presentations, documents and visual content",
+        description: "A visual creation platform useful for presentations, documents, graphics and other professional content.",
+        url: "https://www.canva.com/"
+      },
+      {
+        name: "Gamma",
+        category: "Presentations",
+        bestFor: "Fast presentation creation",
+        description: "Helps create presentations and other visual documents with AI-assisted content generation.",
+        url: "https://gamma.app/"
+      },
+      {
+        name: "Otter.ai",
+        category: "Meetings",
+        bestFor: "Meeting notes and transcription",
+        description: "An AI meeting assistant designed to help capture conversations, transcripts and meeting notes.",
+        url: "https://otter.ai/"
+      },
+      {
+        name: "Zapier",
+        category: "Automation",
+        bestFor: "Connecting apps and automating repetitive tasks",
+        description: "Helps connect different apps and automate workflows so repetitive tasks require less manual work.",
+        url: "https://zapier.com/"
+      },
+      {
+        name: "NotebookLM",
+        category: "Research & Documents",
+        bestFor: "Working with source documents",
+        description: "An AI research and note-taking tool designed to help users understand and work with their own sources.",
+        url: "https://notebooklm.google.com/"
+      }
+    ];
+
+    const grid = document.getElementById("toolsGrid");
+    const searchInput = document.getElementById("searchInput");
+    const toolCount = document.getElementById("toolCount");
+    const noResults = document.getElementById("noResults");
+
+    function escapeHTML(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function renderTools(filter = "") {
+      const query = filter.toLowerCase().trim();
+
+      const filtered = tools.filter(tool =>
+        `${tool.name} ${tool.category} ${tool.bestFor} ${tool.description}`
+          .toLowerCase()
+          .includes(query)
+      );
+
+      toolCount.textContent =
+        `${filtered.length} ${filtered.length === 1 ? "tool" : "tools"} shown`;
+
+      grid.innerHTML = filtered.map(tool => `
+        <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+          <div class="flex items-center justify-between gap-3">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+              ${escapeHTML(tool.category)}
+            </span>
+
+            <span class="text-xs text-slate-400">
+              Free access available
+            </span>
+          </div>
+
+          <h3 class="text-xl font-bold mt-4">
+            ${escapeHTML(tool.name)}
+          </h3>
+
+          <p class="text-sm text-slate-500 mt-2">
+            Best for: ${escapeHTML(tool.bestFor)}
+          </p>
+
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            ${escapeHTML(tool.description)}
+          </p>
+
+          <a
+            href="${escapeHTML(tool.url)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-5 text-sm font-semibold text-white hover:underline">
+            Visit Official Site →
+          </a>
+        </article>
+      `).join("");
+
+      noResults.classList.toggle("hidden", filtered.length !== 0);
+    }
+
+    searchInput.addEventListener("input", event => {
+      renderTools(event.target.value);
+    });
+
+    renderTools();
+  </script>
+
+</body>
+</html>
