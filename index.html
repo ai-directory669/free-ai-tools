@@ -404,7 +404,15 @@
 <script>
 
 const toolsData = [
-
+{
+    name: "LocalFlow",
+    category: "Writing & Research",
+    benefit: "Convert PDF files to text locally without uploading documents to the cloud.",
+    bestFor: "PDF to Text & private documents",
+    free: "Free & open source",
+    url: "https://github.com/ai-directory669/localflow",
+    buttonLabel: "View on GitHub"
+},
     {
         name: "Perplexity AI",
         category: "Writing & Research",
@@ -657,7 +665,7 @@ function renderDirectory(dataList) {
                        py-3 px-4 rounded-xl
                        flex items-center justify-center gap-2">
 
-                Visit Official Site
+              ${escapeHTML(item.buttonLabel || "Visit Official Site")}
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
